@@ -5,10 +5,10 @@
 
 <div [ngSwitch]="statusPicked">
   <div *ngSwitchCase="'User'">
-    <status-user></status-user>
+    <app-profile></app-profile>
   </div>
   <div *ngSwitchCase="'Roma'">
-      <status-roma></status-roma>
+      <app-profile [rooms]="userList"></app-profile>
   </div>
   <div *ngSwitchDefault>
       You need to choose your status to see some info.
