@@ -1,7 +1,7 @@
 <h1>Choose your status</h1>
-<button class="btn btn-danger" (click) = "Choose1()">User</button>
-<button class="btn btn-success" (click) = "Choose2()">Roma</button>
-<button class="btn btn-dark" (click) = "Choose3()">Log out</button>
+<button class="btn btn-danger" (click) = "Choose1(1)">User</button>
+<button class="btn btn-success" (click) = "Choose1(2)">Roma</button>
+<button class="btn btn-dark" (click) = "Choose1(3)">Log out</button>
 
 <div [ngSwitch]="statusPicked">
   <div *ngSwitchCase="'User'">
