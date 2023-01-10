@@ -36,7 +36,7 @@ export class AppComponent implements OnInit{
         surname: 'none',
         age: 'unknown',
         hobbies: 'unknown',
-        born: new Date('00-00-0000')
+        born: new Date('01-01-2001')
       }
     ]
   }
