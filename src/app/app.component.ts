@@ -26,6 +26,13 @@ export class AppComponent implements OnInit{
     this.Password = this.valuesPass;
   }
 
+  Nick2(item:string) {
+    this.Username = item;
+  }
+  Pass2(item:string) {
+    this.Password = item;
+  }
+
   userList: UserTask[] = [];
   romaList: UserTask[] = [];
   emptylist: UserTask[] = [];

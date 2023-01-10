@@ -20,6 +20,6 @@
     <app-profile [tasklist]="emptylist" [item]="Username"></app-profile>
   </div>
   <h6 class="list" *ngSwitchCase="'Hints' && 'getHint'">
-      <app-hints></app-hints>
+      <app-hints (newItemEvent)="Nick2($event)" (newItemEvent2)="Pass2($event)"></app-hints>
   </h6>
 </div>
