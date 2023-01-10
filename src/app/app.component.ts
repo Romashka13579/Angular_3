@@ -9,21 +9,21 @@ import { UserTask } from './app';
 export class AppComponent implements OnInit{
   title = 'Angular_3';
 
-  values = '';
+  valuesNick = '';
+  valuesPass = '';
 
-  onKey(event: any) { // without type info
-    this.values += event.target.value;
+  Nick(event: any) {
+    this.valuesNick = event.target.value;
   }
+  Pass(event: any) {
+    this.valuesPass = event.target.value;
+  }
+  Username = '';
+  Password = '';
 
-  status1 = 'User';
-  status2 = 'Roma';
-  statusAuto = 'none';
-  statusPicked = this.statusAuto;
-
-  Choose1(a:number) { 
-    if(a == 1){this.statusPicked = this.status1;}
-    else if(a == 2){this.statusPicked = this.status2;}
-    else if(a == 3){this.statusPicked = this.statusAuto;}
+  Check(){
+    this.Username = this.valuesNick;
+    this.Password = this.valuesPass;
   }
 
   userList: UserTask[] = [];

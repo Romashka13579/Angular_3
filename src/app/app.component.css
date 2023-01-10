@@ -1,3 +1,12 @@
 .btn{
-    margin: 10px;
+    margin: 0px 10px;
+}
+
+.input-group{
+    max-width: 1000px;
+    padding: 0px 50px 0px 10px;
+}
+
+.badge{
+    margin: 10px 10px;
 }

@@ -1,22 +1,20 @@
-<h1>Choose your status</h1>
+<h1><span class="badge text-bg-dark">Registration</span></h1>
 <div class="input-group mb-3">
   <span class="input-group-text" id="basic-addon1">Nick:</span>
-  <input type="text" class="form-control" placeholder="User12345" aria-label="Username" aria-describedby="basic-addon1" (keyup)="onKey($event)">
+  <input (keyup)="Nick($event)" type="text" class="form-control" placeholder="User12345" aria-label="Username" aria-describedby="basic-addon1">
 </div>
 <div class="input-group mb-3">
   <span class="input-group-text" id="basic-addon1">Password:</span>
-  <input type="text" class="form-control" placeholder="123456789" aria-label="Username" aria-describedby="basic-addon1" (keyup)="onKey($event)">
+  <input (keyup)="Pass($event)" type="text" class="form-control" placeholder="123456789" aria-label="Username" aria-describedby="basic-addon1">
 </div>
-<button class="btn btn-danger" (click) = "Choose1(1)">User</button>
-<button class="btn btn-success" (click) = "Choose1(2)">Roma</button>
-<button class="btn btn-dark" (click) = "Choose1(3)">Log out</button>
+<button (click)="Check()" class="btn btn-dark" type="button">Log in</button>
 
-<div [ngSwitch]="statusPicked">
+<div [ngSwitch]="Username">
   <div *ngSwitchCase="'User'">
-    <app-profile [tasklist]="userList" [item]="statusPicked"></app-profile>
+    <app-profile [tasklist]="userList" [item]="Username"></app-profile>
   </div>
   <div *ngSwitchCase="'Roma'">
-    <app-profile [tasklist]="romaList" [item]="statusPicked"></app-profile>
+    <app-profile [tasklist]="romaList" [item]="Username"></app-profile>
   </div>
   <div *ngSwitchDefault>
       You need to choose your status to see some info.
