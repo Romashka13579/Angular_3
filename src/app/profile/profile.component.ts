@@ -8,4 +8,5 @@ import { UserTask } from '../app';
 })
 export class ProfileComponent{
   @Input() tasklist: UserTask[] = [];
+  @Input() item = '';
 }

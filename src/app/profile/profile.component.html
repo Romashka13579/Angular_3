@@ -2,8 +2,8 @@
 <table class="table table-dark table-striped">
     <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">Task</th>
+          <th scope="col">{{'#' | uppercase}}</th>
+          <th scope="col">{{'Task' | uppercase}}</th>
           <th scope="col">Subject</th>
           <th scope="col">Requirements</th>
           <th scope="col">Deadline</th>
@@ -12,10 +12,11 @@
       <tbody>
         <tr *ngFor="let task of tasklist; let i = index">
           <th scope="row">{{i+1}}</th>
-          <td>{{task.name}}</td>
+          <td>{{task.name | uppercase }}</td>
           <td>{{task.subject}}</td>
           <td>{{task.requirements}}</td>
           <td>{{task.deadline | date : 'h:mm dd/MM'}}</td>
         </tr>
       </tbody>
 </table>
+<h1><span class="badge bg-secondary">you loged in as {{item}}</span></h1>

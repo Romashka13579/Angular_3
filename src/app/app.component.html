@@ -5,10 +5,10 @@
 
 <div [ngSwitch]="statusPicked">
   <div *ngSwitchCase="'User'">
-    <app-profile [tasklist]="userList"></app-profile>
+    <app-profile [tasklist]="userList" [item]="statusPicked"></app-profile>
   </div>
   <div *ngSwitchCase="'Roma'">
-    <app-profile [tasklist]="romaList"></app-profile>
+    <app-profile [tasklist]="romaList" [item]="statusPicked"></app-profile>
   </div>
   <div *ngSwitchDefault>
       You need to choose your status to see some info.
