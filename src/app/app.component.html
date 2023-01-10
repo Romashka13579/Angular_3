@@ -16,7 +16,10 @@
   <div class="list" *ngSwitchCase="'Roma' && '123456789'">
     <app-profile [tasklist]="romaList" [item]="Username"></app-profile>
   </div>
-  <h6 *ngSwitchDefault>
-      You need to log in to see some info.
+  <div class="list" *ngSwitchCase="'Administrator' && 'Admin'">
+    <app-profile [tasklist]="emptylist" [item]="Username"></app-profile>
+  </div>
+  <h6 class="list" *ngSwitchCase="'Hints' && 'getHint'">
+      <app-hints></app-hints>
   </h6>
 </div>

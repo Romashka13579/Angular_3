@@ -28,6 +28,7 @@ export class AppComponent implements OnInit{
 
   userList: UserTask[] = [];
   romaList: UserTask[] = [];
+  emptylist: UserTask[] = [];
   
   ngOnInit(): void{
     this.userList = [
@@ -71,6 +72,7 @@ export class AppComponent implements OnInit{
         deadline: new Date('01-17-2023 13:00')
       }
     ]
+    this.emptylist = []
   }
 
 }
