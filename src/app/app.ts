@@ -1,7 +1,6 @@
-export interface UserData{
+export interface UserTask{
     name: string,
-    surname: string,
-    age: any,
-    hobbies: string,
-    born: Date,
+    subject: string,
+    requirements: string,
+    deadline: Date,
 }

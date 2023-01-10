@@ -5,23 +5,10 @@
 
 <div [ngSwitch]="statusPicked">
   <div *ngSwitchCase="'User'">
-    <h1><span class="badge bg-secondary">Your personal data:</span></h1>
-    <div class="row">
-      <div class="col">{{userList[1].name}}</div>
-      <div class="col">{{userList[1].surname}}</div>
-      <div class="col">{{userList[1].age}}</div>
-      <div class="col">{{userList[1].hobbies}}</div>
-      <div class="col">{{userList[1].born | date : 'MM/dd/yyyy'}}</div>
-    </div>
+    <app-profile [tasklist]="userList"></app-profile>
   </div>
   <div *ngSwitchCase="'Roma'">
-    <h1><span class="badge bg-secondary">Your personal data:</span></h1>
-    <div>{{userList[0].name}}</div>
-    <div>{{userList[0].surname}}</div>
-    <div>{{userList[0].age}}</div>
-    <div>{{userList[0].hobbies}}</div>
-    <div>{{userList[0].born | date : 'MM/dd/yyyy'}}</div>
-      
+    <app-profile [tasklist]="romaList"></app-profile>
   </div>
   <div *ngSwitchDefault>
       You need to choose your status to see some info.

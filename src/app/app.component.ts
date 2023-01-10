@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserData } from './app';
+import { UserTask } from './app';
 
 @Component({
   selector: 'app-root',
@@ -20,23 +20,49 @@ export class AppComponent implements OnInit{
     else if(a == 3){this.statusPicked = this.statusAuto;}
   }
 
-  userList: UserData[] = [];
+  userList: UserTask[] = [];
+  romaList: UserTask[] = [];
   
   ngOnInit(): void{
     this.userList = [
       {    
-        name: 'Roman',
-        surname: 'Rudenko',
-        age: 16,
-        hobbies: 'programming and playing the guitar',
-        born: new Date('03-26-2006')
+        name: 'Essay',
+        subject: 'English',
+        requirements: 'minimum 200 words',
+        deadline: new Date('01-12-2023 12:00')
       },
       {    
-        name: 'User',
-        surname: 'none',
-        age: 'unknown',
-        hobbies: 'unknown',
-        born: new Date('01-01-2001')
+        name: 'Exam',
+        subject: 'Math',
+        requirements: 'solve 20 tasks',
+        deadline: new Date('01-15-2023 23:59')
+      }
+    ];
+    this.romaList = [
+      {    
+        name: 'Exam',
+        subject: 'L',
+        requirements: 'solve 20 tasks',
+        deadline: new Date('01-15-2023 23:59')
+      },
+      {    
+        name: 'Presentation',
+        subject: 'History',
+        requirements: 'use less text and more photoes',
+        deadline: new Date('01-16-2023 22:59')
+      },
+      {    
+        name: 'Writing',
+        subject: 'Ukrainian language',
+        requirements: 'not less than 2 pages',
+        deadline: new Date('01-13-2023 10:00')
+      }
+      ,
+      {    
+        name: 'Lab',
+        subject: 'Chemistry',
+        requirements: 'Don`t forget to write a conclusion',
+        deadline: new Date('01-17-2023 13:00')
       }
     ]
   }
