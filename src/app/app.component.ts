@@ -9,6 +9,12 @@ import { UserTask } from './app';
 export class AppComponent implements OnInit{
   title = 'Angular_3';
 
+  values = '';
+
+  onKey(event: any) { // without type info
+    this.values += event.target.value;
+  }
+
   status1 = 'User';
   status2 = 'Roma';
   statusAuto = 'none';

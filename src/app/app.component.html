@@ -1,4 +1,12 @@
 <h1>Choose your status</h1>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">Nick:</span>
+  <input type="text" class="form-control" placeholder="User12345" aria-label="Username" aria-describedby="basic-addon1" (keyup)="onKey($event)">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">Password:</span>
+  <input type="text" class="form-control" placeholder="123456789" aria-label="Username" aria-describedby="basic-addon1" (keyup)="onKey($event)">
+</div>
 <button class="btn btn-danger" (click) = "Choose1(1)">User</button>
 <button class="btn btn-success" (click) = "Choose1(2)">Roma</button>
 <button class="btn btn-dark" (click) = "Choose1(3)">Log out</button>
